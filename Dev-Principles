@@ -1,0 +1,41 @@
+SOLID
+https://en.wikipedia.org/wiki/SOLID
+
+Single responsibility principle
+A class should only have a single responsibility, that is, only changes to one part of the software's specification 
+should be able to affect the specification of the class.
+
+Open–closed principle
+"Software entities ... should be open for extension, but closed for modification."
+
+Liskov substitution principle
+"Objects in a program should be replaceable with instances of their subtypes without altering the correctness of 
+that program." See also design by contract.
+
+Interface segregation principle
+"Many client-specific interfaces are better than one general-purpose interface."
+
+Dependency inversion principle[
+One should "depend upon abstractions, [not] concretions."
+---------------------------------------------------------------------
+GRASP (General Responsibility Assignment Software Patterns)
+https://en.wikipedia.org/wiki/GRASP_(object-oriented_design)
+
+Controller
+Creator
+Indirection
+Information expert
+High cohesion
+Low coupling
+Polymorphism
+Protected variations
+Pure fabrication
+---------------------------------------------------------------------
+IoC (Inversion of control)
+https://en.wikipedia.org/wiki/Inversion_of_control
+
+ IoC inverts the flow of control as compared to traditional control flow. In IoC, custom-written portions of a 
+ computer program receive the flow of control from a generic framework. A software architecture with this design 
+ inverts control as compared to traditional procedural programming: in traditional programming, the custom code 
+ that expresses the purpose of the program calls into reusable libraries to take care of generic tasks, but with 
+ inversion of control, it is the framework that calls into the custom, or task-specific, code.
