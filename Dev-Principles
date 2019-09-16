@@ -39,3 +39,11 @@ https://en.wikipedia.org/wiki/Inversion_of_control
  inverts control as compared to traditional procedural programming: in traditional programming, the custom code 
  that expresses the purpose of the program calls into reusable libraries to take care of generic tasks, but with 
  inversion of control, it is the framework that calls into the custom, or task-specific, code.
+ ---------------------------------------------------------------------
+ YAGNI (You aren't gonna need it)
+ https://en.wikipedia.org/wiki/You_aren't_gonna_need_it
+ 
+ "You aren't gonna need it" (YAGNI) is a principle of extreme programming (XP) that states a programmer should not add 
+ functionality until deemed necessary.[4] XP co-founder Ron Jeffries has written: "Always implement things when you 
+ actually need them, never when you just foresee that you need them." Other forms of the phrase include "You aren't 
+ going to need it" and "You ain't gonna need it".
