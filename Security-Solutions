@@ -1,0 +1,582 @@
+1	CYBERSECURITY SOLUTIONS
+1.1	Multifactor Authentication (Cat II, Raw I)
+1.2	Vulnerability Scanning (Raw I, II, III)
+1.3	Security Technical Implementation Guide (STIG) Application (Raw I, II, III)
+1.4	Centralized Management (Raw I)
+1.5	Test/Development Environment (Raw I)
+1.6	Patch Management (Raw I, II, III)
+1.7	Malicious Code Detection/Eradication (Raw I, II, III)
+1.8	User Activity Monitoring (Raw I, II)
+1.9	Least Privilege (Accounts) (Cat II, Raw I, II, III)
+1.10	Application Whitelisting (Cat II, Raw I)
+1.11	Firewalls (Cat II, Raw I)
+1.12	Intrusion Detection/Prevention System (Raw I, II, III)
+1.13	Data Loss Prevention (DLP) (Raw I)
+1.14	Data-In-Transit (DIT) Encryption (Cat I, Raw I)
+1.15	Data-At-Rest (DAR) Encryption (Cat II, Raw I, III)
+1.16	Database Input Validation (Raw I, III)
+1.17	Deep Packet Inspection (Cat I)
+1.18	Supply Chain Assurance (Raw I, II)
+1.19	Integrity Verification (Software, Firmware, Information) (Raw I, II)
+1.20	Key-Management for Passwords (Cat II, Raw I, III)
+1.21	Required Documentation (Raw I, II, III)
+1.22	Endpoint/Device Authentication (Cat II, Raw I)
+1.23	Weekly Encrypted Backups (Raw II, III)
+1.24	Offline Backup Storage (Raw II, III)
+1.25	Red/Black Device Separation (Cat II, Raw II)
+1.26	Red/Black Wire Separation (Cat II, Raw II)
+1.27	Out-Of-Band (OOB) Management (Raw II, III)
+1.28	HTTPS on Webservers (Cat II)
+1.29	Computer Network Defense Service Provider (CNDSP) / Cyber Security Service Provider (CSSP) (Raw II, III)
+1.30	Independent Verification and Validation (IV&V) (Raw II, III)
+1.31	TEMPEST Facility (Cat II, Raw II)
+1.32	Centralized Audit Log Management (Cat II, III, Raw II, III)
+1.33	Dual Network Time Protocol (NTP) Servers (Cat III)
+1.34	Alternate Site (Raw III)
+1.35	Software Assurance (Raw III)
+1.36	Cloud Migration
+
+2	APPENDIX A – Cyber Security Concepts
+2.1	Confidentiality
+2.2	Integrity
+2.3	Availability
+2.4	Authentication
+2.5	Authorization
+2.6	Accountability
+2.7	Non-Repudiation
+2.8	Continuous Monitoring
+2.9	Encryption (In Transit & At Rest)
+2.10	Device Hardening
+2.11	Central Management
+2.12	Boundary Protection
+2.13	Network Defense
+2.14	Data Loss Protection (In Transit & At Rest)
+2.15	Backup/Restore
+2.16	Redundancy
+2.17	Documentation
+2.18	Emission Security
+2.19	Red/Black Concept
+
+1	CYBERSECURITY SOLUTIONS
+Cybersecurity related requirements must be derived from the gamut of DoD guidance, RMF Security Controls, and ongoing defense posture upkeep. The following sections detail solutions which provide remediation or corrective guidance to decrease the cybersecurity risk aggregation. The solutions below are provided as handling guidance related to the vulnerability listed in the heading of each section below. The system is required to operate at the lowest risk level possible based on proper implementation and handling of each security control. Evaluation of each vulnerability, the related likelihood of occurrence, and impact if exploited will need to be considered in order to prioritize implementation and handling efforts. Guidance below is at a high level and will need to be boiled down into actual system level requirements; e.g. the system level requirement for Multifactor Authentication (MFA) is to implement the most secure solution related to the control requirement.
+1.1	Multifactor Authentication (Cat II, Raw I)
+Definition:  Authentication using two or more factors to achieve authentication. Factors include: (i) something you know (e.g. password/personal identification number (PIN)); (ii) something you have (e.g., cryptographic identification device, token); or (iii) something you are (e.g., biometric).
+Requirements: 
+•	The information system implements multifactor authentication for network access to privileged and non-privileged accounts. (RMF IA-2)
+•	Two-factor authentication must be implemented to restrict access to all network elements. (Network Infrastructure Policy STIG)
+•	The operating system must use multifactor authentication for local access to non-privileged accounts. (General Purpose Operating System SRG)
+•	The operating system must use multifactor authentication for local access to privileged accounts. (General Purpose Operating System SRG)
+•	To address core vulnerabilities exploited in recent cyber incidents, USCYBERCOM is directing the acceleration of DOD PKI system administrator and privileged user authentication for all UNCLASSIFIED, SECRET, and TS collateral DOD information systems including DOD programs; special access programs; and strategic, tactical, and RDT&E systems. (CTO 15-0102)
+Product Categories:
+•	Authentication (User Authentication Biometric Authentication and PKI)
+•	Identify and Access Management
+Outcome:
+•	All DoD MFA requirements are fully understood. System fully leverages MFA across all devices within accreditation boundary. Deficiencies must be well documented and tied to a DoD reference, mitigations are understood and/or implemented. Acceptance of any high risk deviations from a full solution will require AF CIO and DoD CIO approval. 
+•	Secure, manageable, repeatable, documented, sustainable and non-degraded solution across all components.
+
+1.2	Vulnerability Scanning (Raw I, II, III)
+Definition: Sending packets or requests to another system to gain information about weaknesses in an information system, system security procedures, internal controls, or implementation that could be exploited by a threat source.
+Requirements:
+•	The organization scans for vulnerabilities in the information system and hosted applications on an organization-defined frequency. (RMF RA-5)
+Product Categories:
+•	Vulnerability Assessment
+Outcome:
+•	The DoD accepted solution is the Assured Compliance Assessment Solution (ACAS), which uses the Nessus scanner. The ACAS is an integrated software solution that provides automated network vulnerability scanning, configuration assessment, and network discovery. 
+•	ACAS consists of a suite of products to include the: 
+o	Security Center
+o	Nessus Scanner 
+o	Nessus Network Monitor
+
+1.3	Security Technical Implementation Guide (STIG) Application (Raw I, II, III)
+Definition: Based on Department of Defense (DoD) policy and security controls. Implementation guide geared to a specific product and version. Contains all requirements that have been flagged as applicable for the product which have been selected on a DoD baseline.
+Requirements:
+•	The organization defines security configuration checklists to be used to establish and document configuration settings for the information system technology products employed. (RMF CM-6)
+•	The organization establishes configuration settings for information technology products employed within the information system using organization-defined security configuration checklists. (RMF CM-6)
+•	The organization documents configuration settings for information technology products employed within the information system using organization-defined security configuration checklists that reflect the most restrictive mode consistent with operational requirements. (RMF CM-6)
+•	The organization-defined security configuration checklists reflect the most restrictive mode consistent with operational requirements. (RMF CM-6)
+•	The organization implements the security configuration settings. (RMF CM-6)
+Product Categories:
+•	Security Configuration Management
+Outcome:
+•	Use the STIG and Security Requirements Guides (SRG) available on the DISA IASE website to configure the information system and components.
+
+1.4	Centralized Management (Raw I)
+Definition: Management decisions and configuration for networked information system devices occurs in a single administrative node.
+Requirements:
+•	The organization employs automated mechanisms to centrally manage configuration settings for organization-defined information system components. (RMF CM-6(1))
+Product Categories:
+•	Security Operations Automation and Orchestration
+•	Security Configuration Management
+Outcome:
+•	A Group Policy Object (GPO) is a virtual collection of policy settings. A GPO has a unique name, such as a GUID. Group Policy settings are contained in a GPO. A GPO can represent policy settings in the file system and in the Active Directory.
+•	Active Directory (AD) is a directory service that Microsoft developed for Windows domain networks.
+•	Ansible
+
+1.5	Test/Development Environment (Raw I)
+Definition: A development environment is a collection of procedures and tools for developing, testing and debugging an application or program.
+Requirements:
+•	The organization tests software updates related to flaw remediation for effectiveness before installation. (RMF SI-2)
+•	The organization tests software updates related to flaw remediation for potential side effects before installation. (RMF SI-2)
+•	The organization tests firmware updates related to flaw remediation for effectiveness before installation. (RMF SI-2)
+•	The organization tests firmware updates related to flaw remediation for potential side effects before installation. (RMF SI-2)
+Product Categories:
+Outcome:
+•	Must have a test and development environment separate from the production environment in order to test updates and changes.
+
+1.6	Patch Management (Raw I, II, III)
+Definition: Patch management is a strategy for managing patches or upgrades for software applications and technologies.
+Requirements:
+•	The organization corrects information system flaws. (RMF SI-2)
+Product Categories:
+•	Patch Configuration and Management
+Outcome:
+•	Windows Server Update Services (WSUS) is Windows server software from Microsoft that automatically downloads Windows-related updates and distributes them to client machines over the local network.
+•	RHEL Satellite Server is an IT infrastructure management tool primarily used to monitor and manage Red Hat Enterprise Linux environments. Satellite is part of Red Hat's four-piece systems management tool set for enterprise IT, which also includes Ansible, CloudForms and the Red Hat Insights service.
+•	Manual patching is also a solution as long as patches are tracked.
+
+1.7	Malicious Code Detection/Eradication (Raw I, II, III)
+Definition: Software or firmware intended to perform an unauthorized process that will have adverse impact on the confidentiality, integrity, or availability of an information system. A virus, worm, Trojan horse, or other code-based entity that infects a host. Spyware and some forms of adware are also examples of malicious code.
+Requirements:
+•	The organization employs malicious code protection mechanisms at information system entry points to detect malicious code. (RMF SI-3)
+•	The organization centrally manages malicious code protection mechanisms. (RMF SI-3)
+Product Categories:
+•	Endpoint Protection and Anti-virus
+•	Endpoint Threat Detection and Response
+•	Malware Detection and Analysis
+•	Specialized Threat Analysis and Protection
+Outcome:
+•	Host-Based Security System (HBSS) is the United States Department of Defense (DOD) commercial-off-the-shelf (COTS) suite of software applications used within the DOD to monitor, detect, and defend the DOD computer networks and systems.
+o	McAfee ePolicy Orchestrator (McAfee ePO) is the most advanced, extensible, and scalable centralized security management software in the industry.
+o	Rogue System Detection on each VLAN; discovers rogue firmware.
+o	HIPS; leverages a whitelist and definitions file to find and stop malware attacks.
+•	Endpoint Security Solutions (ESS) is an integrated set of capabilities that work together to detect, deter, protect, and report on cyber threats across all DOD networks. It is also the replacement for HBSS.
+
+1.8	User Activity Monitoring (Raw I, II)
+Definition: The technical capability to observe and record the actions and activities of an individual, at any time, on any device accessing U.S. Government information in order to detect insider threat and to support authorized investigations.
+Requirements: 
+•	The organization monitors the use of information system accounts. (RMF AC-2)
+•	The organization monitors information system accounts for organization-defined atypical use. (RMF AC-2)
+•	The information system provides the capability for authorized users to select a user session to capture/record or view/hear. (AU-14)
+•	The information system provides the capability for authorized users to capture/record and log content related to a user session. (AU-14)
+Product Categories:
+•	Behavior Analytics (User and Entity)
+•	Security Information and Event Management
+Outcome:
+•	Forcepoint
+
+1.9	Least Privilege (Accounts) (Cat II, Raw I, II, III)
+Definition: The principle that a security architecture should be designed so that each entity is granted the minimum system resources and authorizations that the entity needs to perform its function.
+Requirements:
+•	The organization employs the concept of least privilege, allowing only authorized accesses for users (and processes acting on behalf of users) which are necessary to accomplish assigned tasks in accordance with organizational missions and business functions. (RMF AC-6)
+•	The operating system must prevent non-privileged users from executing privileged functions to include disabling, circumventing, or altering implemented security safeguards/countermeasures. (General Purpose Operating System SRG)
+Product Categories:
+•	Identify and Access Management
+Outcome:
+•	Perform accurate account management
+
+1.10	Application Whitelisting (Cat II, Raw I)
+Definition: list of discrete applications that are known to be benign and are approved for use within an organization and/or information system.
+Requirements:
+•	The organization employs an deny-all, permit-by-exception policy to allow the execution of authorized software programs on the information system. (RMF CM-7(5))
+•	The operating system must prevent program execution in accordance with local policies regarding software program usage and restrictions and/or rules authorizing the terms and conditions of software program usage. (General Purpose Operating System SRG)
+•	The operating system must employ a deny-all, permit-by-exception policy to allow the execution of authorized software programs. (General Purpose Operating System SRG)
+Product Categories:
+•	Application Control
+Outcome:
+•	Use Windows Policies to control applications
+
+1.11	Firewalls (Cat II, Raw I)
+Definition: A gateway that limits access between networks in accordance with local security policy.
+Requirements:
+•	The information system monitors and controls communications at the external boundary of the system and at key internal boundaries within the system. (RMF SC-7)
+•	The organization defines the host-based boundary protection mechanisms that are to be implemented at organization-defined information system components. (RMF SC-7)
+•	Verify the operating system enabled an application firewall, if available. (General Purpose Operating Systems SRG)
+Product Categories:
+•	Firewall Configuration and Management
+•	Network Firewall (includes Next Generation Firewalls)
+Outcome:
+•	Boundary firewall
+•	DMZ firewall
+•	Windows Firewall
+•	IPTables
+•	Cisco ASA devices
+•	Web Application Firewall
+
+1.12	Intrusion Detection/Prevention System (Cat II, Raw I, II, III)
+Network IDS Definition: IDSs which detect attacks by capturing and analyzing network packets. Listening on a network segment or switch, one network-based IDS can monitor the network traffic affecting multiple hosts that are connected to the network segment.
+Host Based IDS Definition: IDSs which operate on information collected from within an individual computer system. This vantage point allows host-based IDSs to determine exactly which processes and user accounts are involved in a particular attack on the Operating System. Furthermore, unlike network-based IDSs, host- based IDSs can more readily “see” the intended outcome of an attempted attack, because they can directly access and monitor the data files and system processes usually targeted by attacks.
+IPS Definition: Software that has all the capabilities of an intrusion detection system and can also attempt to stop possible incidents.
+Requirements:
+•	The organization monitors the information system to detect attacks and indicators of potential attacks in accordance with organization-defined monitoring objectives. (RMF SI-4)
+•	The organization makes provisions so that organization-defined encrypted communications traffic is visible to organization-defined information system monitoring tools. (RMF SI-4)
+•	An Intrusion Detection and Prevention System (IDPS) must be deployed to monitor all unencrypted traffic entering and leaving the enclave. (Network Infrastructure Policy STIG)
+Product Categories:
+•	Endpoint Threat Detection and Response
+•	Intrusion Prevention Systems (and Intrusion Detection Systems)
+•	Specialized Threat Analysis and Protection
+Outcome:
+•	An intrusion detection system (IDS) is a type of security software designed to automatically alert administrators when someone or something is trying to compromise information system through malicious activities or through security policy violations.
+•	An intrusion prevention system (IPS) is a system that monitors a network for malicious activities such as security threats or policy violations. The main function of an IPS is to identify suspicious activity, and then log information, attempt to block the activity, and then finally to report it.
+•	Deep packet inspection: Analyzing network traffic to discover the type of application that sent the data.
+
+1.13	Data Loss Prevention (DLP) (Raw I)
+Definition: A systems ability to identify, monitor, and protect data in use (e.g. endpoint actions), data in motion (e.g. network actions), and data at rest (e.g. data storage) through deep packet content inspection, contextual security analysis of transaction (attributes of originator, data object, medium, timing, recipient/destination, etc.), within a centralized management framework. Data loss prevention capabilities are designed to detect and prevent the unauthorized use and transmission of NSS information.
+Requirements: 
+•	The organization prevents the unauthorized exfiltration of information across managed interfaces. (SC-7(10))
+Product Categories:
+•	Data Discovery
+•	Data Loss (Leakage) Prevention (DLP)
+•	Data Security
+Outcome: 
+•	McAfee HBSS
+•	Symantec DLP
+
+1.14	Data-In-Transit (DIT) Encryption (Cat I, Raw I)
+Definition: In transit refers to data that is encrypted as it traverses a network — including via web applications, smart phone apps, chats, etc. In-transit basically refers to the point at which the data leaves the storage drive or database until it's re-saved or delivered to its destination.
+Requirements:
+•	The information system protects the confidentiality and/or integrity of transmitted information. (RMF SC-8)
+•	Failure to properly encrypt classified data in transit can lead to the loss or compromise of classified or sensitive information (Network Infrastructure Policy STIG)
+Product Categories:
+•	Data-in-Motion/Transit (Network) Encryption and VPN
+Outcome: 
+•	SSL/TLS
+•	IPSEC
+•	VPN
+•	AES-256 encryption
+
+1.15	Data-At-Rest (DAR) Encryption (Cat II, Raw I, III)
+Definition: Data at rest is an information technology term referring to inactive data which is stored physically in any digital form.
+Requirements:
+•	The information system implements cryptographic mechanisms to prevent unauthorized modification of organization-defined information at rest on organization-defined information system components. (RMF SC-28)
+•	The operating system must protect the confidentiality and integrity of all information at rest. (General Purpose Operating System SRG)
+Product Categories:
+•	Data-at-Rest Encryption
+Outcome:
+•	Whole disk encryption
+•	Bitlocker
+•	Roxio Secure Burn
+•	Database Transparent Data Encryption
+•	TENS Encryption Wizard
+•	Yubikey
+
+1.16	Database Input Validation (Raw I, III)
+Definition: Data validation is the process of ensuring that a program operates on clean, correct and useful data. It uses routines, often called "validation rules" "validation constraints" or "check routines", that check for correctness, meaningfulness, and security of data that are input to the system.
+Requirements:
+•	The information system checks the validity of organization-defined inputs. (RMF SI-10)
+Product Categories:
+•	Big Data Security
+•	Data Security
+•	Database Security
+Outcome:
+•	Properly configured database architectures which ensure only specified values may be entered as data inputs and queries.
+
+1.17	Deep Packet Inspection (Cat I)
+Definition: Deep packet inspection (DPI) is an advanced method of examining and managing network traffic. It is a form of packet filtering that locates, identifies, classifies, reroutes or blocks packets with specific data or code payloads that conventional packet filtering, which examines only packet headers, cannot detect.
+Requirements:
+•	The organization must implement a deep packet inspection solution when protecting perimeter boundaries. (Network Infrastructure Policy STIG)
+Product Categories:
+•	Network Firewall (includes Next Generation Firewalls)
+•	Network Monitoring and Forensics
+Outcome: 
+•	Implement a deep packet inspection solution at the enclave boundaries. Verify any IA appliances used for deep packet inspection are connected, properly configured, and actively inspecting all ingress and egress network traffic.
+•	Cisco Application Visibility and Control (AVC)
+•	Cisco PGW Packet Data Network Gateway
+•	Juniper MobileNext Broadband Gateway
+
+1.18	Supply Chain Assurance (Raw I, II)
+Definition: Confidence that the supply chain will produce and deliver elements, processes, and information that function as expected.
+Requirements:
+•	The organization limits the use of commercially provided information assurance (IA) and IA-enabled information technology products to those products that have been successfully evaluated against a National Information Assurance partnership (NIAP)-approved Protection Profile for a specific technology type, if such a profile exists. (RMF SA-4(7))
+•	The organization requires, if no NIAP-approved Protection Profile exists for a specific technology type but a commercially provided information technology product relies on cryptographic functionality to enforce its security policy, that the cryptographic module is FIPS-validated. (RMF SA-4)
+•	The organization conducts a supplier review prior to entering into a contractual agreement to acquire the information system, system component, or information system service. (RMF SA-12(2))
+Product Categories:
+Outcome:
+•	Search for NIAP or Common Criteria protection profiles of proposed equipment and software solutions. Perform a vendor analysis and prepare a risk assessment for products without protection profiles.
+
+1.19	Integrity Verification (Software, Firmware, Information) (Raw I, II)
+Definition: Guarding against improper information modification or destruction, and includes ensuring information non-repudiation and authenticity.
+Requirements: 
+•	The organization employs integrity verification tools to detect unauthorized changes to organization-defined software, firmware, and information. (RMF SI-7)
+•	The information system performs an integrity check of organization-defined software at startup, at organization-defined transitional states or security-relevant events, or on organization-defined frequency. (RMF SI-7(1))
+Product Categories:
+•	Software Assurance
+Outcome:
+•	UEFI Secure Boot
+•	Qualys File Integrity Monitoring (FIM)
+•	Tripwire FIM
+
+1.20	Key-Management for Passwords (Cat II, Raw I, III)
+Definition: Key Management - The activities involving the handling of cryptographic keys and other related security parameters (e.g. passwords) during the entire life cycle of the keys, including their generation, storage, establishment, entry and output, and destruction.
+Password - A protected/private string of letters, numbers, and/or special characters used to authenticate an identity or to authorize access to data.
+Requirements:
+•	RMF IA-5 Family: Authenticator Management
+•	RMF IA-5(1) Family: Authenticator Management | Password-Based Authentication
+•	Authentication, Authorization, and Accounting Services (AAA) SRG
+•	General Purpose Operating System SRG
+•	Operating System SRG
+Product Categories:
+•	Password Manager
+Outcome:
+•	Centralized solution to automate key-management functions.
+
+1.21	Required Documentation (Raw I, II, III)
+Definition: Documentation regarding the inter-workings of an information system.
+Requirements:
+•	Various RMF Controls. Generally the first control per family.
+•	The organization requires the developer of the information system, system component, or information system service to identify early in the system development life cycle, the functions, ports, protocols, and services intended for organizational use. (RMF SA-4)
+•	The organization defines for the information system prohibited or restricted functions, ports, protocols, and/or services. (RMF CM-7(1))
+•	The organization develops and documents an inventory of information system components that includes organization defined information deemed necessary to achieve effective information system component accountability. (RMF CM-8)
+•	The organization defines the software programs authorized to execute on the information system. (RMF CM-7(5))
+•	The organization develops a plan of action and milestones for the information system to document the organizations planned remedial actions to correct weaknesses or deficiencies noted during the assessment of the security controls and to reduce or eliminate known vulnerabilities in the system. (RMF CA-5)
+•	The organization documents, for each internal connection, the interface characteristics. (RMF CA-9)
+•	The organization authorizes connections from the information system to other information systems through the use of Interconnection Security Agreements. (CA-3)
+Outcome:
+•	Technical documents: 
+o	PPSM
+o	Software List
+o	Hardware List
+o	Network Topology/ABD
+o	STIG/SRG Applicability List
+o	STIG/SRG Application Checklists
+o	Data Flows Diagram
+o	Service Level Agreements/Memorandums of Understanding
+•	RMF Documents
+o	Categorization Memorandum
+o	Security Plan
+o	Security Assessment Report
+o	Risk Assessment Report
+o	POA&M
+•	Plans:
+o	Cybersecurity Assessment Plan
+o	Continuity of Operations Plan
+o	Contingency Plan
+o	Incident Response Plan
+o	Disaster Recovery Plan
+o	Continuous Monitoring Plan
+o	Configuration Management Plan
+o	Critical Infrastructure Plan
+•	Policies and Procedures:
+o	AC, AT, AU, CA, CM, CP, IA, IR, MA, MP, PE, PL, PM, PS, RA, SA, SC, SI Policies and Procedures
+•	Interconnection Security Agreements
+
+1.22	Endpoint/Device Authentication (Cat I, II, Raw I)
+Definition: Endpoint authentication is a security mechanism designed to ensure that only authorized devices can connect to a given network, site or service. The approach is also known as device authentication.
+Requirements:
+•	The information system uniquely identifies an organization defined list of specific and/or types of devices before establishing a local, remote, or network connection. (IA-3)
+•	The information system authenticates organization-defined devices and/or types of devices before establishing a local, remote and/or network connection using bidirectional authentication that is cryptographically based. (IA-3(1))
+•	The operating system must authenticate all endpoint devices before establishing a local, remote, and/or network connection using bidirectional authentication that is cryptographically based. (General Purpose Operating System SRG)
+•	The switch must be configured to use 802.1x authentication on host facing access switch ports. (Infrastructure L3 Switch STIG)
+•	The IAO will ensure that 802.1x is implemented using a secure EAP such as EAP-TLS, EAP-TTLS or PEAP. (Network Devices STIG)
+Product Categories:
+•	Zero Trust
+Outcome:
+•	IEEE 802.1x
+•	RADIUS with EAP-TLS
+•	Kerberos
+•	Software Defined Perimeter
+
+1.23	Weekly Encrypted Backups (Raw II, III)
+Definition: A copy of files and programs made to facilitate recovery, if necessary.
+Requirements:
+•	The organization conducts backups of user-level information contained in the information system weekly that is consistent with recovery time and recovery point objectives. (RMF CP-9)
+•	The organization conducts backups of system-level information contained in the information system weekly that is consistent with recovery time and recovery point objectives. (RMF CP-9)
+•	The organization protects the confidentiality, integrity, and availability of backup information at storage locations. (RMF CP-9)
+Product Categories:
+•	Backup & Recovery
+Outcome:
+•	Clonezilla encrypted backups
+•	EMC Networker encrypted backups
+
+1.24	Offline Backup Storage (Raw II, III)
+Definition: A copy of files and programs made to facilitate recovery stored outside the production system either in a separate backup system or in external media.
+Requirements:
+•	The organization stores backup copies of organization defined critical information system software and other security-related information in a separate facility or in a fire-rated container that is not collocated with the operational system. (RMF CP-9(3))
+•	The organization transfers information system backup information to the alternate storage site in accordance with the organization-defined time period and transfer rate consistent with the recovery time and recovery point objectives. (RMF CP-9(5))
+Outcome:
+•	Removable/USB hard drives
+•	Co-located safe
+•	Alternate site storage
+
+1.25	Red/Black Device Separation (Cat II, Raw II)
+Red Data Definition: Date that is not protected by encryption.  Also known as unencrypted data.
+Black Data Definition: Data that is protected by encryption so that it can be transported or stored without fear of compromise.  Also known as encrypted data.
+Requirements:
+•	A separation of at least 50 centimeters (19.7 inches) between any RED processor and BLACK equipment is required. (Traditional Security Checklist)
+•	The organization protects the information system from information leakage due to electromagnetic signals emanations. (PE-19)
+Outcome:
+•	Rack separation between Red/Black devices
+
+1.26	Red/Black Wire Separation (Cat II, Raw II)
+Red Data Definition: Date that is not protected by encryption.  Also known as unencrypted data.
+Black Data Definition: Data that is protected by encryption so that it can be transported or stored without fear of compromise.  Also known as encrypted data.
+Requirements:
+•	A separation of at least 5 centimeters (2 inches) is required between any RED wire line and BLACK wire lines that exit the inspectable space (exit space not within a SCIF, Secret or above vault or secure room or Secret or above CAA) or are connected to an RF transmitter, or BLACK power lines. (Traditional Security Checklist)
+•	The organization protects the information system from information leakage due to electromagnetic signals emanations. (PE-19)
+Outcome:
+•	Cable management of Red/Black wires
+
+1.27	Out-Of-Band (OOB) Management (Raw II, III)
+Definition: OOB management involves the use of a dedicated channel for managing network devices. This allows the network operator to establish trust boundaries in accessing the management function to apply it to network resources.
+Requirements:
+•	The organization isolates organization-defined information security tools, mechanisms, and support components from other internal information system components by implementing physically separate subnetworks with managed interfaces to other components of the system. (RMF SC-7(13))
+Outcome:
+•	Separate management network to physically separate traffic.
+
+1.28	HTTPS on Webservers (Cat II)
+Definition: Hyper Text Transfer Protocol Secure (HTTPS) is the secure version of HTTP, the protocol over which data is sent between your browser and the website that you are connected to.
+SSL works by using the service public key to encrypt a secret key that is used to encrypt the data that is transferred over the SSL session. By convention, URLs that require an SSL connection start with “https:” instead of “http:”.  The default port for SSL is 443. 
+Transport Layer Security (TLS) is a security protocol providing privacy and data integrity between two communicating applications. The protocol is composed of two layers: the TLS Record Protocol and the TLS Handshake Protocol.
+Requirements:
+•	A web server must maintain the confidentiality of controlled information during transmission through the use of an approved TLS version. (Web Server SRG)
+•	The web server must employ cryptographic mechanisms (TLS/DTLS/SSL) preventing the unauthorized disclosure of information during transmission. (Web Server SRG)
+•	The web server must use encryption strength in accordance with the categorization of data hosted by the web server when remote connections are provided. (Web Server SRG)
+•	The web server must encrypt passwords during transmission. (Web Server SRG)
+Product Categories:
+•	SSL and Digital Certificate Authority and Management
+Outcome:
+•	Configure the webserver to use SSL/TLS on all connections
+•	Disallow non-HTTPS connections
+
+1.29	Computer Network Defense Service Provider (CNDSP) / Cyber Security Service Provider (CSSP) (Raw II, III)
+Definition: Computer network defense (CND) is a set of processes and protective measures that use computer networks to detect, monitor, protect, analyze and defend against network infiltrations resulting in service/network denial, degradation and disruptions.
+Requirements:
+•	The organization implements an incident handling capability for security incidents that includes preparation, detection and analysis, containment, eradication, and recovery. (RMF IR-4)
+•	The organization establishes a direct, cooperative relationship between its incident response capability and external providers of information system protection capability. (RMF IR-7(2))
+Product Categories:
+•	Managed Security Service Providers
+Outcome:
+•	Implement or contract a CNDSP/CSSP NOSC
+
+1.30	Independent Verification and Validation (IV&V) (Raw II, III)
+Definition: A comprehensive review, analysis, and testing, (software and/or hardware) performed by an objective third party to confirm (i.e., verify) that the requirements are correctly defined, and to confirm (i.e., validate) that the system correctly implements the required functionality and security requirements.
+Requirements:
+•	The organization employs assessors or assessment teams with organization-defined level of independence to conduct security control assessments of organizational information systems. (CA-2(1))
+•	The organization accepts the results of an assessment of the organization-defined information system performed by organization-defined external organization when the assessment meets organization-defined requirements. (CA-2(3))
+Outcome: 
+•	Employ an independent third-party organization like the 47th CTS to perform and IV&V.
+
+1.31	TEMPEST Facility (Cat II, Raw II)
+Definition: TEMPEST is a name referring to the investigation, study, and control of unintentional compromising emanations from telecommunications and automated information systems equipment.
+Requirements:
+•	Failure to implement required TEMPEST countermeasures could leave the system(s) vulnerable to a TEMPEST attack (Traditional Security Check List)
+•	The organization ensures that information system components, associated data communications, and networks are protected in accordance with national emissions and TEMPEST policies and procedures based on the security category or classification of the information. (PE-19(1))
+Outcome:
+•	Current DoD regulation covers this requirement at the facility level.
+
+1.32	Centralized Audit Log Management (Cat II, III, Raw II, III)
+Definition: A chronological record of system activities which is stored in a single administrative repository. Includes records of system accesses and operations performed in a given period.
+Requirements:
+•	The information system provides centralized management and configuration of the content to be captured in audit records generated by organization-defined information system components. (RMF AU-3(2))
+•	The information system backs up audit records on an organization defined frequency onto a different system or system component than the system or component being audited (RMF AU-9(2))
+•	A centralized syslog server must be deployed in the management network. (Network Infrastructure STIG)
+•	The operating system must provide the capability to centrally review and analyze audit records from multiple components within the system. (General Purpose Operating System STIG)
+Product Categories:
+•	Security Information and Event Management (and Log Management)
+Outcome:
+•	Syslog is a way for network devices to send event messages to a logging server – usually known as a Syslog server. 
+•	Splunk software enables IT and security teams to get more out of existing security tools, by aggregating event data from across the environment into a single repository of critical security insights. 
+•	Security Information and Event Management (SIEM) software products and services combine security information management and security event management. They provide real-time analysis of security alerts generated by network hardware and applications.
+
+1.33	Dual Network Time Protocol (NTP) Servers (Cat III)
+Definition: NTP provides an efficient and scalable method for managed network elements to actively synchronize to an accurate time source. 
+Requirements:
+•	Two Network Time Protocol (NTP) servers must be deployed in the management network. (Network Infrastructure Policy STIG)
+Outcome:
+•	Authoritative external router
+•	GPS servers 
+•	Time servers
+
+1.34	Alternate Site (Raw III)
+Definition: Alternate processing sites are sites that are geographically distinct from primary processing sites. An alternate processing site provides processing capability in the event that the primary processing site is not available.
+Requirements:
+•	The organization establishes an alternate processing site including necessary agreements to permit the transfer and resumption of organization-defined information system operations for essential missions within organization-defined time period consistent with recovery time and recovery point objectives when the primary processing capabilities are unavailable. (RMF CP-7)
+Outcome:
+•	Have an alternate site where operations may continue following a disaster or disruption.
+
+1.35	Software Assurance (Raw III)
+Definition: The level of confidence that software functions as intended and is free of vulnerabilities, either intentionally or unintentionally designed or inserted as part of the software throughout the lifecycle. (DoDI 5200.44)
+Requirements: 
+•	The organization requires the developer of the information system, system component, or information system service to demonstrate the use of a system development life cycle that includes organization-defined state-of-the-practice system/security engineering methods, software development methods, testing/evaluation/validation techniques, and quality control processes. (RMF SA-4(3))
+•	The organization applies information system security engineering principles in the design of the information system. (RMF SA-8)
+•	The organization requires the developer of the information system, system component, or information system service to perform a manual code review of organization-defined specific code using organization defined processes, procedures, and/or techniques. (RMF SA-11(4))
+•	The organization requires the developer of the information system, system component, or information system service to perform attack surface reviews. (RMF SA-11(6))
+Product Categories:
+•	Software Assurance
+Outcome: 
+•	Perform manual and automated code reviews using certified personnel and/or accepted software such as Fortify.
+
+1.36	Cloud Migration
+Definition: Cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction.
+Requirements:
+•	Rapidly migrate our data processing and storage to the cloud with a supporting policy framework that allows for effective cyberspace security and defensive maneuver. (AFSPC/CC)
+Outcome:
+•	Use one of the many cloud service offerings
+•	Cloud Requirements:
+o	PKI/MFA
+o	STIG Application
+o	DNS Server with DNSSEC (SC-20)
+o	Bastion Host
+
+ 
+2	APPENDIX A – Cyber Security Concepts
+In order to secure the Confidentiality, Integrity, and Availability of a system, cyber security engineers will employ a variety of concepts in order to guide the selection of technical solutions.  
+
+2.1	Confidentiality
+Preserving authorized restrictions on information access and disclosure, including means for protecting personal privacy and proprietary information.
+
+2.2	Integrity
+Guarding against improper information modification or destruction, and includes ensuring information non-repudiation and authenticity.
+
+2.3	Availability
+Ensuring timely and reliable access to and use of information.
+
+2.4	Authentication
+Verifying the identity of a user, process, or device, often as a prerequisite to allowing access to resources in an information system.
+A security measure designed to protect a communications system against acceptance of fraudulent transmission or simulation by establishing the validity of a transmission, message, originator, or a means of verifying an individual's eligibility to receive specific categories of information.
+
+2.5	Authorization
+Access privileges granted to a user, program, or process or the act of granting those privileges.
+
+2.6	Accountability
+The security goal that generates the requirement for actions of an entity to be traced uniquely to that entity.  This supports non-repudiation, deterrence, fault isolation, intrusion detection and prevention, and after-action recovery and legal action. 
+
+2.7	Non-Repudiation
+Protection against an individual falsely denying having performed a particular action.  Provides the capability to determine whether a given individual took a particular action such as creating information, sending a message, approving information, and receiving a message.
+
+2.8	Continuous Monitoring
+Maintaining ongoing awareness of information security, vulnerabilities, and threats to support organizational risk management decisions.  
+
+2.9	Encryption (In Transit & At Rest)
+The cryptographic transformation of data to produce ciphertext.
+Data in transit is defined into two categories, information that flows over the public or untrusted network such as the internet and data which flows in the confines of a private network such as a corporate or enterprise Local Area Network (LAN).
+Data at rest is an information technology term referring to inactive data which is stored physically in any digital form
+
+2.10	Device Hardening
+Providing various means of protection in a computer system. Protection is provided in various layers and is often referred to as defense in depth. Protecting in layers means to protect at the host level, the application level, the operating system level, the user level, the physical level and all the sublevels in between. Each level requires a unique method of security.
+
+2.11	Central Management
+The centralized management and configuration of user nodes and devices by an authoritative source.
+
+2.12	Boundary Protection
+Monitoring and control of communications at the external boundary of an information system to prevent and detect malicious and other unauthorized communications, through the use of boundary protection devices (e.g. gateways, routers, firewalls, guards, encrypted tunnels).
+
+2.13	Network Defense
+Programs, activities, and the use of tools necessary to facilitate them (including those governed by NSPD-54/HSPD-23 and NSD-42) conducted on a computer, network, or information or communications system by the owner or with the consent of the owner and, as  appropriate, the users for the primary purpose of protecting (1) that computer, network, or system; (2) data stored on, processed on, or transiting that computer, network, or system; or (3) physical and virtual infrastructure controlled by that computer, network, or system.  Network defense does not involve or require accessing or conducting activities on computers, networks, or information or communications systems without authorization from the owners or exceeding access authorized by the owners.
+
+2.14	Data Loss Protection (In Transit & At Rest)
+A systems ability to identify, monitor, and protect data in use (e.g. endpoint actions), data in motion (e.g. network actions), and data at rest (e.g. data storage) through deep packet content inspection, contextual security analysis of transaction (attributes of originator, data object, medium, timing, recipient/destination, etc.), within a centralized management framework. Data loss prevention capabilities are designed to detect and prevent the unauthorized use and transmission of NSS information.
+
+2.15	Backup/Restore
+A copy of files and programs made to facilitate recovery, if necessary.
+
+2.16	Redundancy
+Redundancy is a system design in which a component is duplicated so if it fails there will be a backup.
+
+2.17	Documentation
+The documentation of configurations, diagrams, policies, and procedures regarding a system and its components.
+
+2.18	Emission Security
+The component of communications security that results from all measures taken to deny unauthorized persons information of value that might be derived from intercept and analysis of compromising emanations from cryptoequipment and information systems.
+
+2.19	Red/Black Concept
+Separation of electrical and electronic circuits, components, equipment, and systems that handle national security information (RED), in electrical form, from those that handle non-national security information (BLACK) in the same form.
